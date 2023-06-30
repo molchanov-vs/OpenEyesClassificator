@@ -1,1 +1,4 @@
 __pycache__/
+.DS_Store
+dataset/.DS_Store
+dataset/train/.DS_Store

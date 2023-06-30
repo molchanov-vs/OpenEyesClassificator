@@ -48,8 +48,6 @@ def load_data(path, type_):
     Y = np.array(Y)
 
     X = X.reshape(-1, 24, 24, 1)
-    # X = X.astype('float32')
-    # Y = Y.astype('float32')
     X = X / 255
 
     return X, Y
@@ -89,10 +87,6 @@ def show_examples_of_predicted_images(predicted_labels, test_X):
         plt.imshow(test_X[pos], cmap=plt.cm.gray)
         plt.xlabel(values[pos][0])
     plt.show()
-
-    # for i, el in enumerate(sorted(predicted_labels)):
-    # if el > 0.4 and el < 0.6:
-    #     print(el)
 
 
 def split_train(train_X, train_Y, test_size=0.2):
